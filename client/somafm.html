@@ -1,0 +1,12 @@
+
+<template name="somafm">
+  <h1>Soma.fm player</h1>
+  
+  <ul>
+    {{#each channels}}
+    <li><a href="#{{this}}">{{this}}</a></li>
+    {{/each}}
+  </ul>
+  
+  <iframe id="somaframe" style="width:410; height: 220" src="" />
+</template>
