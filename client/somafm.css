@@ -5,6 +5,10 @@ body {
   color: white;
 }
 
+h1 {
+  margin: 0;
+}
+
 ul li {
   list-style-type: none;
 }
@@ -18,3 +22,8 @@ li a {
   color: #eee;
 }
 
+#somaframe {
+  width: 363px;
+  height: 205px;
+  border: 0;
+}
