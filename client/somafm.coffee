@@ -5,12 +5,11 @@ Template.somafm.channels =
 
 Template.somafm.events
   'click ul li a': (e) ->
-    changeChannel()
+    changeChannel(e.srcElement.href.split('#')[1])
 
-changeChannel = ->
-  channel = location.hash.slice(1)
+changeChannel = (channel) ->
   if channel
     $('#somaframe').attr 'src', 'http://somafm.com/popup/?' + channel
 
 Meteor.startup ->
-  changeChannel()
+  changeChannel(location.hash.slice(1))
