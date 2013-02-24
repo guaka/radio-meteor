@@ -1,10 +1,12 @@
 
 <template name="somafm">
-  <ul>
-    {{#each channels}}
-    <li><a href="#{{this}}">{{this}}</a></li>
-    {{/each}}
-  </ul>
-  
+  <div id="channels">
+    <ul>
+      {{#each channels}}
+      <li><a href="#{{this}}">{{this}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+
   <iframe id="somaframe" src="/getstarted.html" />
 </template>
