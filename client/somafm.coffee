@@ -23,6 +23,9 @@ Template.somafm.channels =
 
   # latest added:
     'bagel', 'sf1033'
+
+  # to add:
+  # DubstepBeyond
   ].sort()
 
 Template.somafm.events
