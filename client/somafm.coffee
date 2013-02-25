@@ -1,21 +1,25 @@
 
 Template.somafm.channels =
-  [ 'secretagent'
-    'illstreet', 'spacestation', 'doomed'
-    'bootliquor', 'lush'
-    'u80s', 'sonicuniverse', 'poptron', 'covers'
-    'brfm', 'missioncontrol'
-
+  [
   # offline
-  # 480min, tags
+  # 480min tags sonicuniverse
 
   # checked
-    'groovesalad'
-    'dronezone'
-    'indiepop'
+    'secretagent'
+    'illstreet', 'spacestation', 'doomed'
+    'missioncontrol'
     'beatblender'
+    'bootliquor'
+    'brfm'
+    'covers'
     'digitalis'
+    'dronezone'
+    'groovesalad'
+    'indiepop'
+    'lush'
+    'poptron'
     'suburbsofgoa'
+    'u80s',
 
   # latest added:
     'bagel', 'sf1033'
@@ -23,6 +27,7 @@ Template.somafm.channels =
 
 Template.somafm.events
   'click ul li a': (e) ->
+    console.log e
     Session.set 'channel', e.srcElement.href.split('#')[1]
 
 Template.somafm.somaUrl = ->
