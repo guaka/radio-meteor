@@ -51,3 +51,10 @@ p a {
   text-align: right;
   margin-right: 10px;
 }
+
+#intro {
+  color: #999; 
+  font-family: "Monaco", "Lucida Console", "Monotype.com", "Andale Mono", "Courier", "Trebuchet MS", "Sans-Serif";
+  font-size: 120%;
+  margin-top: 12px;
+}
