@@ -1,13 +1,18 @@
 
 <template name="somafm">
-  <div id="channels">
-    <ul>
-      {{#each channels}}
-      <li><a href="#{{this}}">{{this}}</a></li>
-      {{/each}}
-    </ul>
-  </div>
+  <div class="row">
+    <div id="channels" class="span4">
+      <h1><a class="soma" href="http://somafm.com/">soma fm</a> player</h1>
+      <ul>
+        {{#each channels}}
+        <li><a href="#{{this}}">{{this}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
 
-  <div id="intro">{{intro}}</div>
-  <iframe id="somaframe" src="{{somaUrl}}" />
+    <div class="span8">
+      <div id="intro">{{intro}}</div>
+      <iframe id="somaframe" src="{{somaUrl}}" />
+    </div>
+  </div>
 </template>

@@ -1,0 +1,10 @@
+
+#tweets {
+  float: right;
+  color: #999;
+}
+
+#tweets .author {
+  text-align:right;
+}
+

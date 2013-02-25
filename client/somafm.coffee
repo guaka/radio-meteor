@@ -1,11 +1,25 @@
 
 Template.somafm.channels =
-  ['groovesalad', 'secretagent', 'dronezone'
-   'indiepop', 'cliqhop', 'beatblender', 'tags'
-   'illstreet', 'spacestation', 'doomed', 'bagel'
-   'bootliquor', 'lush', 'digitalis', 'suburbsofgoa'
-   'u80s', 'sonicuniverse', 'poptron', 'covers'
-   'brfm', 'missioncontrol', '480min'].sort()
+  [ 'secretagent'
+    'illstreet', 'spacestation', 'doomed'
+    'bootliquor', 'lush'
+    'u80s', 'sonicuniverse', 'poptron', 'covers'
+    'brfm', 'missioncontrol'
+
+  # offline
+  # 480min, tags
+
+  # checked
+    'groovesalad'
+    'dronezone'
+    'indiepop'
+    'beatblender'
+    'digitalis'
+    'suburbsofgoa'
+
+  # latest added:
+    'bagel', 'sf1033'
+  ].sort()
 
 Template.somafm.events
   'click ul li a': (e) ->
