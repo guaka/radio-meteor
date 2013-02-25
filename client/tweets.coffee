@@ -3,7 +3,6 @@ Twitter = new Meteor.Collection 'twitter'
 
 Template.tweets.feed = ->
   data = Twitter.findOne {}
-  console.log 'test', data
   if data
     $(data.content).find("entry").map ->
       o = {}
