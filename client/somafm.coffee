@@ -27,8 +27,11 @@ Template.somafm.channels =
 
 Template.somafm.events
   'click ul li a': (e) ->
-    console.log e
-    Session.set 'channel', e.srcElement.href.split('#')[1]
+    if e.srcElement?
+      href = e.srcElement.href
+    else
+      href = e.currentTarget.href
+    Session.set 'channel', href.split('#')[1]
 
 Template.somafm.somaUrl = ->
   channel = Session.get 'channel'
