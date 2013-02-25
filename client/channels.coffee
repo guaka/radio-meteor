@@ -3,6 +3,7 @@ channels = [
   # 480min tags sonicuniverse
 
   # checked
+    'cliqhop'
     'secretagent'
     'illstreet', 'spacestation', 'doomed'
     'missioncontrol'
