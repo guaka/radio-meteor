@@ -12,8 +12,12 @@ Template.somafm.events
 
 Template.somafm.somaUrl = ->
   channel = Session.get 'channel'
-  if channel
+
+  if channel is 'paradise'
+    "http://scfire-m37.websys.aol.com:80/radio_paradise_mp3_128kbps"
+  else
     "http://ice.somafm.com/" + channel
+
 
 Meteor.startup ->
   Session.set 'channel', location.hash.slice(1)

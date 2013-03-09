@@ -23,4 +23,7 @@ channels = [
   # latest added:
     'bagel', 'sf1033'
     'dubstep'
+
+  # yo
+    'paradise'
   ]
