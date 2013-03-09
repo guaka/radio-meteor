@@ -13,7 +13,7 @@ Template.somafm.events
 Template.somafm.somaUrl = ->
   channel = Session.get 'channel'
   if channel
-    'http://somafm.com/popup/?' + channel
+    "http://ice.somafm.com/" + channel
 
 Meteor.startup ->
   Session.set 'channel', location.hash.slice(1)
@@ -21,3 +21,6 @@ Meteor.startup ->
 Template.somafm.intro = ->
   if not Session.get('channel')
     'click on a channel to start listening'
+
+Template.somafm.rendered = ->
+  $('#player')[0].play()

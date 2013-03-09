@@ -11,8 +11,10 @@
     </div>
 
     <div class="span8">
-      <div id="intro">{{intro}}</div>
-      <iframe id="somaframe" src="{{somaUrl}}" />
+      <audio controls preload id="player">
+        <source src="{{somaUrl}}" />
+      </audio>
     </div>
   </div>
+
 </template>
