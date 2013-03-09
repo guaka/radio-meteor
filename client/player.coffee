@@ -1,8 +1,8 @@
 
-Template.somafm.channels =
+Template.player.channels =
   channels.sort()
 
-Template.somafm.events
+Template.player.events
   'click ul li a': (e) ->
     if e.srcElement?
       href = e.srcElement.href
@@ -10,7 +10,7 @@ Template.somafm.events
       href = e.currentTarget.href
     Session.set 'channel', href.split('#')[1]
 
-Template.somafm.somaUrl = ->
+Template.player.srcUrl = ->
   channel = Session.get 'channel'
 
   if channel is 'paradise'
@@ -22,9 +22,5 @@ Template.somafm.somaUrl = ->
 Meteor.startup ->
   Session.set 'channel', location.hash.slice(1)
 
-Template.somafm.intro = ->
-  if not Session.get('channel')
-    'click on a channel to start listening'
-
-Template.somafm.rendered = ->
+Template.player.rendered = ->
   $('#player')[0].play()

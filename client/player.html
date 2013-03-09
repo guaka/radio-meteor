@@ -1,8 +1,8 @@
 
-<template name="somafm">
+<template name="player">
   <div class="row">
     <div id="channels" class="span4">
-      <h1><a class="soma" href="http://somafm.com/">soma fm</a> player</h1>
+      <h1>radio meteor</h1>
       <ul>
         {{#each channels}}
         <li><a href="#{{this}}">{{this}}</a></li>
@@ -12,7 +12,7 @@
 
     <div class="span8">
       <audio controls preload id="player">
-        <source src="{{somaUrl}}" />
+        <source src="{{srcUrl}}" />
       </audio>
     </div>
   </div>
