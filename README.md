@@ -4,7 +4,7 @@ Inspired by https://github.com/joe-roth/somafm-popup and the need for a nice way
 Paradise radio and soon more.
 
 
-**Available at http://radio.meteor.com/**
+**Available at [radio.meteor.com](http://radio.meteor.com/)**
 
 
 There's also an Android app built with http://github.com/guaka/meteor-phonegap
