@@ -10,8 +10,9 @@
         <source src="{{srcUrl}}" />
       </audio>
       
-      <button class="btn btn-large" id="stop">
-        <i class="icon-stop"></i>
+      <button class="btn btn-primary btn-large" id="stop">
+        <!-- <i class="icon-stop"></i>  -->
+        STOP
       </button>
 
       <span id="currentTime"></span>
@@ -21,7 +22,7 @@
 
   <div id="channels" class="text-center">
     {{#each channels}}
-    <button class="btn btn-large {{#if playing}}btn-primary{{/if}}" id="channel-{{name}}">
+    <button class="btn btn-large {{#if playing}}btn-success{{else}}btn-primary{{/if}}" id="channel-{{name}}">
       {{name}}
     </button>
     {{/each}}
