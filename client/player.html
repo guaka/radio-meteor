@@ -3,11 +3,14 @@
   <div class="row">
     <div id="channels" class="span4">
       <h1>radio meteor</h1>
-      <ul>
-        {{#each channels}}
-        <li><a href="#{{this}}">{{this}}</a></li>
-        {{/each}}
-      </ul>
+
+      <div class="btn-group btn-group-vertical">
+      {{#each channels}}
+      <button class="btn {{#if playing}}btn-primary{{/if}}" id="channel-{{name}}">
+        {{name}}
+      </button>
+      {{/each}}
+      </div>
     </div>
 
     <div class="span8">

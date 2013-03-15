@@ -1,14 +1,22 @@
 
-Template.player.channels =
-  channels.sort()
+Template.player.channels = ->
+  ({ name: c, playing: c is Session.get('channel')} for c in channels.sort())
+
+
+Template.player.playing = ->
+  this.name is Session.get 'channel'
+
+
+evt = null
 
 Template.player.events
-  'click ul li a': (e) ->
-    if e.srcElement?
-      href = e.srcElement.href
-    else
-      href = e.currentTarget.href
-    Session.set 'channel', href.split('#')[1]
+  'click button': (e) ->
+    evt = e
+    id = if e.srcElement? then e.srcElement.id else e.currentTarget.id
+    channel = id.split('-')[1]
+    Session.set 'channel', channel
+    location.href = '#' + channel
+
 
 Template.player.srcUrl = ->
   channel = Session.get 'channel'
