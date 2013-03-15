@@ -1,12 +1,20 @@
 
 <template name="player">
   <div class="row">
-    <div class="span12 text-center">
+    <div class="span6 text-right">
       <h1>radio meteor</h1>
+    </div>
 
-      <audio controls preload id="player">
+    <div class="span6 text-left">
+      <audio preload id="player">
         <source src="{{srcUrl}}" />
       </audio>
+      
+      <button class="btn btn-large" id="stop">
+        <i class="icon-stop"></i>
+      </button>
+
+      <span id="currentTime"></span>
 
     </div>
   </div>

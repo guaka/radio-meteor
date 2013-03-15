@@ -13,7 +13,10 @@ Template.player.events
   'click button': (e) ->
     evt = e
     id = if e.srcElement? then e.srcElement.id else e.currentTarget.id
-    channel = id.split('-')[1]
+    if id is 'stop'
+      channel = ''
+    else
+      channel = id.split('-')[1]
     Session.set 'channel', channel
     location.href = '#' + channel
 
@@ -29,6 +32,7 @@ Template.player.srcUrl = ->
 
 Meteor.startup ->
   Session.set 'channel', location.hash.slice(1)
+
 
 Template.player.rendered = ->
   $('#player')[0].play()
@@ -53,6 +57,11 @@ readyStates =
   4: 'enough'
 
 
-#Meteor.setInterval ->
-#  Session.set 'networkState', $('#player')[0].networkState
-#, 1000
+
+
+Meteor.setInterval ->
+  # Session.set 'networkState', $('#player')[0].networkState
+  timePlayed = $('#player')[0]?.currentTime
+  if timePlayed
+    $('#currentTime')[0].innerHTML = moment().subtract('seconds', Math.round timePlayed).fromNow(true)
+, 5000
