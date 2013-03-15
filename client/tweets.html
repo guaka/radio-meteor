@@ -1,10 +1,12 @@
 <template name="tweets">
-  <div id="tweets">
-    {{#each feed}}
-    <div class="row">
-      <div class="author span4"><a target="_blank" href="http://twitter.com/{{author}}">@{{author}}</a></div>
-      <div class="title span8">{{title}}</div>
-    </div>
+  <div class="row">
+    <div id="tweets">
+      {{#each feed}}
+      <div class="row">
+        <div class="author span4"><a target="_blank" href="http://twitter.com/{{author}}">@{{author}}</a></div>
+        <div class="title span8">{{title}}</div>
+      </div>
     {{/each}}
+    </div>
   </div>
 </template>

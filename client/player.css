@@ -13,15 +13,8 @@ p a {
   color: #d8a24d;
 }
 
-#about {
-  text-align: right;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
-
 #channels button {
-  width: 120px;
+  width: 160px;
 }
 
 
