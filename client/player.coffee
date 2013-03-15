@@ -34,8 +34,9 @@ Template.player.rendered = ->
   $('#player')[0].play()
 
 Template.player.state = ->
-  networkStates[Session.get 'networkState']
-  # + ' ' + readyStates[Session.get 'readyState']
+  #  # + ' ' + readyStates[Session.get 'readyState']
+  #  #networkStates[Session.get 'networkState']
+  ''
 
 
 networkStates =
@@ -52,11 +53,6 @@ readyStates =
   4: 'enough'
 
 
-p0 = null
-
-Meteor.setInterval ->
-  p0 = $('#player')[0]
-  Session.set 'networkState', p0.networkState
-  # Session.set 'readyState', p0.readyState
-  console.log 'n', Session.get 'networkState', 'r', Session.get 'readyState'
-, 1000
+#Meteor.setInterval ->
+#  Session.set 'networkState', $('#player')[0].networkState
+#, 1000
