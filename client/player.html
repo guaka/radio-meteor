@@ -1,23 +1,21 @@
 
 <template name="player">
   <div class="row">
-    <div id="channels" class="span4">
+    <div class="span12">
       <h1>radio meteor</h1>
 
-      <div class="btn-group btn-group-vertical">
-      {{#each channels}}
-      <button class="btn {{#if playing}}btn-primary{{/if}}" id="channel-{{name}}">
-        {{name}}
-      </button>
-      {{/each}}
-      </div>
-    </div>
-
-    <div class="span8">
       <audio controls preload id="player">
         <source src="{{srcUrl}}" />
       </audio>
     </div>
   </div>
 
+  <div id="channels">
+    {{#each channels}}
+    <button class="btn {{#if playing}}btn-primary{{/if}}" id="channel-{{name}}">
+      {{name}}
+    </button>
+    {{/each}}
+  </div>
+  
 </template>

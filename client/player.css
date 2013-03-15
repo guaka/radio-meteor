@@ -1,7 +1,7 @@
 
 body {
   font-family: "Monaco", "Lucida Console", "Monotype.com", "Andale Mono", "Courier", "Trebuchet MS", "Sans-Serif";
-  font-size: 80%;
+  font-size: 90%;
   margin: 0;
 }
 
@@ -13,25 +13,6 @@ p a {
   color: #d8a24d;
 }
 
-.soma {
-  color: #ff001a;
-}
-
-#channels {
-  float: left;
-}
-
-#channels button {
-  width: 120px;
-}
-
-
-#somaframe {
-  width: 420px;
-  height: 240px;
-  border: 0;
-}
-
 #about {
   text-align: right;
   position: absolute;
@@ -39,9 +20,8 @@ p a {
   bottom: 10px;
 }
 
-#intro {
-  color: #999; 
-  font-family: "Monaco", "Lucida Console", "Monotype.com", "Andale Mono", "Courier", "Trebuchet MS", "Sans-Serif";
-  font-size: 120%;
-  margin-top: 12px;
+#channels button {
+  width: 120px;
 }
+
+
