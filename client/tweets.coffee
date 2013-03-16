@@ -12,6 +12,7 @@ Template.tweets.feed = ->
         replace(/http\:\/\/twitter.com\/.*/, '')
       o.title = el.find("title").text().
         replace( /\#nowplaying/, '').
-        replace(/http\:\/\/t.co\/.*/, '')
+        replace(/http\:\/\/t.co\/.*/, '').
+        replace(/[^\w\s]/gi, '')
       o
 
