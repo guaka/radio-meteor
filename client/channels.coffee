@@ -1,29 +1,26 @@
-channels = [
-  # offline
-  # 480min tags sonicuniverse
+channels = {
+    'cliqhop': 'soma'
+    'secretagent': 'soma'
+    'illstreet': 'soma'
+    'spacestation': 'soma'
+    'doomed': 'soma'
+    'missioncontrol': 'soma'
+    'beatblender': 'soma'
+    'bootliquor': 'soma'
+    'brfm': 'soma'
+    'covers': 'soma'
+    'digitalis': 'soma'
+    'dronezone': 'soma'
+    'groovesalad': 'soma'
+    'indiepop': 'soma'
+    'lush': 'soma'
+    'poptron': 'soma'
+    'suburbsofgoa': 'soma'
+    'u80s': 'soma'
+    'bagel': 'soma'
+    'sf1033': 'soma'
+    'dubstep': 'soma'
 
-  # checked
-    'cliqhop'
-    'secretagent'
-    'illstreet', 'spacestation', 'doomed'
-    'missioncontrol'
-    'beatblender'
-    'bootliquor'
-    'brfm'
-    'covers'
-    'digitalis'
-    'dronezone'
-    'groovesalad'
-    'indiepop'
-    'lush'
-    'poptron'
-    'suburbsofgoa'
-    'u80s',
-
-  # latest added:
-    'bagel', 'sf1033'
-    'dubstep'
-
-  # yo
-    'paradise'
-  ]
+    'paradise': 'http://scfire-m37.websys.aol.com:80/radio_paradise_mp3_128kbps'
+    'bbcworld': 'http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk'
+}

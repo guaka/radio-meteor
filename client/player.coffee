@@ -1,6 +1,6 @@
 
 Template.player.channels = ->
-  ({ name: c, playing: c is Session.get('channel')} for c in channels.sort())
+  ({ name: c, playing: c is Session.get('channel')} for c in _.keys(channels).sort())
 
 
 Template.player.playing = ->
@@ -28,10 +28,11 @@ Template.player.events
 Template.player.srcUrl = ->
   channel = Session.get 'channel'
 
-  if channel is 'paradise'
-    "http://scfire-m37.websys.aol.com:80/radio_paradise_mp3_128kbps"
-  else
+  if channels[channel] is 'soma'
     "http://ice.somafm.com/" + channel
+  else
+    channels[channel]
+
 
 
 Meteor.startup ->
