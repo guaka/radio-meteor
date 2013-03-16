@@ -1,10 +1,11 @@
 
 Twitter = new Meteor.Collection 'twitter'
 
+tweets = null
 Template.tweets.feed = ->
   data = Twitter.findOne {}
   if data
-    $(data.content).find("entry").map ->
+    tweets = $(data.content).find("entry").map ->
       o = {}
       el = $(this)
       o.author = el.find("author").text().
@@ -15,4 +16,4 @@ Template.tweets.feed = ->
         replace(/http\:\/\/t.co\/.*/, '').
         replace(/[^\w\s]/gi, '')
       o
-
+  tweets

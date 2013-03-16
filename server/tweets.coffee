@@ -17,5 +17,4 @@ do ->
   Meteor.startup ->
     fetchTweets()
 
-  Meteor.setInterval fetchTweets, 30000
-
+  Meteor.setInterval fetchTweets, 20000
