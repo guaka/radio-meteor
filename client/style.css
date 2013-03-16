@@ -3,3 +3,11 @@
   background-color: #f5f5f5;
   padding-top: 10px;
 }
+
+
+#github-ribbon img {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  border: 0;
+}
