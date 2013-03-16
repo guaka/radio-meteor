@@ -10,7 +10,7 @@
         <source src="{{srcUrl}}" />
       </audio>
       
-      <button class="btn btn-primary btn-large" id="stop">
+      <button class="btn {{#if paused}}btn-success{{else}}btn-primary{{/if}} btn-large" id="stop">
         <!-- <i class="icon-stop"></i>  -->
         STOP
       </button>

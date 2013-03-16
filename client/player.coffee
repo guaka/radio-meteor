@@ -7,6 +7,10 @@ Template.player.playing = ->
   this.name is Session.get 'channel'
 
 
+Template.player.paused = ->
+  not Session.get 'channel'
+
+
 evt = null
 
 Template.player.events
