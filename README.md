@@ -9,7 +9,7 @@ Paradise radio and more.
 
 There's also an Android app built with http://github.com/guaka/meteor-phonegap
 
-https://play.google.com/store/apps/details?id=io.cordova.cordovaradiometeorcom
+https://play.google.com/store/apps/details?id=io.cordova.radio.meteor.com
 
 
 Useful resources
