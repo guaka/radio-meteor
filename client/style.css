@@ -1,7 +1,6 @@
 .footer {
   height: 60px;
-  background-color: #f5f5f5;
-  padding-top: 10px;
+  padding-top: 30px;
 }
 
 
@@ -10,4 +9,17 @@
   top: 0; 
   right: 0; 
   border: 0;
+  z-index: 999;
+}
+
+
+html, body {
+  background: url(/radio-meteor-icon.png) no-repeat center center fixed;
+  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;
+  background-size: cover; 
+}
+
+.container {
+  background: black;
+  opacity: 0.9;
 }

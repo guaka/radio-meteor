@@ -41,11 +41,6 @@ Meteor.startup ->
 Template.player.rendered = ->
   $('#player')[0].play()
 
-Template.player.state = ->
-  #  # + ' ' + readyStates[Session.get 'readyState']
-  #  #networkStates[Session.get 'networkState']
-  ''
-
 
 networkStates =
   0: 'empty'
@@ -64,8 +59,14 @@ readyStates =
 
 
 Meteor.setInterval ->
-  # Session.set 'networkState', $('#player')[0].networkState
-  timePlayed = $('#player')[0]?.currentTime
-  if timePlayed
-    $('#currentTime')[0].innerHTML = moment().subtract('seconds', Math.round timePlayed).fromNow(true)
+  player = $('#player')[0]
+
+  if player?
+    if player.currentTime
+      $('#currentTime')[0].innerHTML = moment().subtract('seconds', Math.round player.currentTime).fromNow(true)
+    if player.readyState
+      $('#readyState')[0].innerHTML = readyStates[player.readyState]
+    if player.networkState
+      $('#networkState')[0].innerHTML = networkStates[player.networkState]
+
 , 5000
