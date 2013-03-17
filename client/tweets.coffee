@@ -8,7 +8,8 @@ Template.tweets.feed = ->
     tweets = $(data.content).find("entry").map ->
       o = {}
       el = $(this)
-      o.author = el.find("author").text().
+      author = el.find("author").text()
+      o.author = author.
         replace(/\(.*\)/, '').
         replace(/http\:\/\/twitter.com\/.*/, '')
       o.title = el.find("title").text().
