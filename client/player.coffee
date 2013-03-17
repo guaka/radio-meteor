@@ -11,7 +11,6 @@ Template.player.paused = ->
   not Session.get 'channel'
 
 
-evt = null
 
 Template.player.events
   'click button': (e) ->
@@ -21,8 +20,14 @@ Template.player.events
       channel = ''
     else
       channel = id.split('-')[1]
-    Session.set 'channel', channel
-    location.href = '#' + channel
+    playChannel channel
+
+
+playChannel = (channel) ->
+  Session.set 'channel', channel
+  location.href = '#' + channel
+  document.title = channel + ' | radio.meteor.com'
+
 
 
 Template.player.srcUrl = ->
@@ -36,7 +41,7 @@ Template.player.srcUrl = ->
 
 
 Meteor.startup ->
-  Session.set 'channel', location.hash.slice(1)
+  playChannel location.hash.slice(1)
 
 
 Template.player.rendered = ->
