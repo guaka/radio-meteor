@@ -31,12 +31,13 @@ playChannel = (channel) ->
 
 
 Template.player.srcUrl = ->
-  channel = Session.get 'channel'
+  name = Session.get 'channel'
 
-  if channels[channel] is 'soma'
-    "http://ice.somafm.com/" + channel
+  channel = channels[name]
+  if channel is 'soma'
+    "http://ice.somafm.com/" + name
   else
-    channels[channel].url
+    channel?.url
 
 
 

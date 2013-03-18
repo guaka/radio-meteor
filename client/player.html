@@ -4,16 +4,17 @@
     <div class="span6 text-right">
       <h1>radio meteor</h1>
     </div>
+    
+    <div class="span6 text-left" style="margin-left:19px">
+      <button class="btn {{#if paused}}btn-success{{else}}btn-primary{{/if}} btn-large" id="stop">
+        <!-- <i class="icon-stop"></i>  -->
+        SILENCE
+      </button>
 
-    <div class="span6 text-left">
       <audio preload id="player">
         <source src="{{srcUrl}}" />
       </audio>
       
-      <button class="btn {{#if paused}}btn-success{{else}}btn-primary{{/if}} btn-large" id="stop">
-        <!-- <i class="icon-stop"></i>  -->
-        STOP
-      </button>
 
       <i class="icon-time"></i>
       <span id="currentTime"></span>
@@ -23,14 +24,22 @@
       <span id="readyState"></span>
 
     </div>
+    
+    <div class="span12">
+      <div id="channels" class="text-center">
+        {{#each channels}}
+        <button class="btn btn-large {{#if playing}}btn-success{{else}}btn-primary{{/if}}" id="channel-{{name}}">
+          {{name}}
+        </button>
+        {{/each}}
+      </div>
+    </div>
+    
+    <div class="span6 text-right">
+      <!-- button class="btn btn-large" id="channel-custom">custom</button -->
+    </div>
+    <div class="span6">
+      <input type="text" id="customUrl" size="60" value="{{srcUrl}}" />
+    </div>
   </div>
-
-  <div id="channels" class="text-center">
-    {{#each channels}}
-    <button class="btn btn-large {{#if playing}}btn-success{{else}}btn-primary{{/if}}" id="channel-{{name}}">
-      {{name}}
-    </button>
-    {{/each}}
-  </div>
-  
 </template>
