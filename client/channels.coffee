@@ -28,5 +28,7 @@ channels = {
     'fip': { url: 'http://mp3.live.tv-radio.com/fip/all/fiphautdebit.mp3' }
     'tsfjazz': { url: 'http://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high', tags: ['ads'] }
 
+    'radioairlibre': { url: 'http://streaming.domainepublic.net:8000/radioairlibre.ogg', tags: ['libre'] }
+
     # '106fmcoil': 'http://212.29.254.129:7075/'
 }
