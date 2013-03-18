@@ -36,7 +36,7 @@ Template.player.srcUrl = ->
   if channels[channel] is 'soma'
     "http://ice.somafm.com/" + channel
   else
-    channels[channel]
+    channels[channel].url
 
 
 
