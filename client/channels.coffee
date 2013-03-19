@@ -30,5 +30,6 @@ channels = {
 
     'radioairlibre': { url: 'http://streaming.domainepublic.net:8000/radioairlibre.ogg', tags: ['libre'] }
 
-    # '106fmcoil': 'http://212.29.254.129:7075/'
+    # todo: parse pls in client?
+    # '106fmcoil': { url: 'http://212.29.254.129:7075/listen.pls' }
 }
