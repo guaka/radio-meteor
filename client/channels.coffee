@@ -1,6 +1,4 @@
 channels = {
-    'concertzender': 'http://streams.greenhost.nl:8080/live'  # pls: 'http://www.concertzender.nl/streams/live'
-
     'cliqhop': 'soma'
     'secretagent': 'soma'
     'illstreet': 'soma'
@@ -23,6 +21,7 @@ channels = {
     'sf1033': 'soma'
     'dubstep': 'soma'
 
+    'concertzender': { url: 'http://streams.greenhost.nl:8080/live', tags: ['classical'] }  # pls: 'http://www.concertzender.nl/streams/live'
     'paradise': { url: 'http://scfire-m37.websys.aol.com:80/radio_paradise_mp3_128kbps' }
     'bbcworld': { url: 'http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk', tags: ['news'] }
     'fip': { url: 'http://mp3.live.tv-radio.com/fip/all/fiphautdebit.mp3' }

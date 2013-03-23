@@ -29,15 +29,23 @@ playChannel = (channel) ->
   document.title = channel + ' | radio.meteor.com'
 
 
+currentChannel = ->
+  name = Session.get 'channel'
+  channels[name]
+
 
 Template.player.srcUrl = ->
-  name = Session.get 'channel'
-
-  channel = channels[name]
-  if channel is 'soma'
-    "http://ice.somafm.com/" + name
+  if currentChannel() is 'soma'
+    "http://ice.somafm.com/" + Session.get 'channel'
   else
-    channel?.url
+    currentChannel()?.url
+
+Template.player.tags = ->
+  channel = currentChannel()
+  if channel is 'soma'
+    'soma'
+  else
+    channel?.tags
 
 
 
