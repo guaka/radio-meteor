@@ -28,6 +28,7 @@ channels = {
     'tsfjazz': { url: 'http://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high', tags: ['jazz', 'ads'] }
 
     'radioairlibre': { url: 'http://streaming.domainepublic.net:8000/radioairlibre.ogg', tags: ['libre', 'bxl'] }
+    'radiocampusbxl': { url: 'http://streamer.radiocampusbruxelles.org:8000/stream.ogg', tags: ['bxl'] }
 
     # todo: parse pls in client?
     # '106fmcoil': { url: 'http://212.29.254.129:7075/listen.pls' }
