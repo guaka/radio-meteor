@@ -1,4 +1,4 @@
-This is a simple Meteor app to play [Soma.fm](http://soma.fm/) and other streams through HTML5.
+**Radio Meteor** is a simple Meteor app to play [Soma.fm](http://soma.fm/) and other streams through HTML5.
 
 Inspired by https://github.com/joe-roth/somafm-popup and the need for a nice way to play Soma.fm streams,
 Paradise radio and more.
@@ -7,9 +7,8 @@ Paradise radio and more.
 **Available at [radio.meteor.com](http://radio.meteor.com/)**
 
 
-There's also an Android app built with http://github.com/guaka/meteor-phonegap
+There's [an Android app](https://play.google.com/store/apps/details?id=io.cordova.radio.meteor.com) built with [meteor-phonegap](http://github.com/guaka/meteor-phonegap)
 
-https://play.google.com/store/apps/details?id=io.cordova.radio.meteor.com
 
 
 Useful resources
