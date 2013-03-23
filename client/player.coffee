@@ -38,7 +38,10 @@ Template.player.srcUrl = ->
   if currentChannel() is 'soma'
     "http://ice.somafm.com/" + Session.get 'channel'
   else
-    currentChannel()?.url
+    if currentChannel()?.tags.indexOf('soma') > -1
+      "http://ice.somafm.com/" + Session.get 'channel'
+    else
+      currentChannel()?.url
 
 Template.player.tags = ->
   channel = currentChannel()

@@ -1,21 +1,21 @@
 channels = {
-    'cliqhop': 'soma'
-    'secretagent': 'soma'
+    'cliqhop':  { tags: ['soma', 'idm'] }
+    'secretagent': { tags: ['soma'] }
     'illstreet': 'soma'
     'spacestation': 'soma'
     'doomed': 'soma'
     'missioncontrol': 'soma'
     'beatblender': 'soma'
     'bootliquor': 'soma'
-    'brfm': 'soma'
+    'brfm': { tags: ['soma', 'burningman'] }
     'covers': 'soma'
-    'digitalis': 'soma'
+    'digitalis': { tags: ['soma', 'indie'], twitter: '' }
     'dronezone': 'soma'
-    'groovesalad': 'soma'
-    'indiepop': 'soma'
-    'lush': 'soma'
+    'groovesalad': { tags: ['soma', 'indie'], twitter: '' }
+    'indiepop': { tags: ['soma', 'indie'], twitter: 'indiepoprocks' }
+    'lush': { tags: ['soma', 'female'] }
     'poptron': 'soma'
-    'suburbsofgoa': 'soma'
+    'suburbsofgoa': { tags: ['soma', 'world'] }
     'u80s': 'soma'
     'bagel': 'soma'
     'sf1033': 'soma'
