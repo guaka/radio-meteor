@@ -7,3 +7,4 @@ preserve-inputs
 coffeescript
 http
 bootstrap
+appcache
