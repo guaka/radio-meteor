@@ -27,6 +27,7 @@ channels = {
     'fip': { url: 'http://mp3.live.tv-radio.com/fip/all/fiphautdebit.mp3' }
     'tsfjazz': { url: 'http://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high', tags: ['jazz', 'ads'] }
 
+    'radiopanik': { url: 'http://streaming.domainepublic.net:8000/radiopanik.ogg', tags: ['libre', 'bx'] }
     'radioairlibre': { url: 'http://streaming.domainepublic.net:8000/radioairlibre.ogg', tags: ['libre', 'bxl'] }
     'radiocampusbxl': { url: 'http://streamer.radiocampusbruxelles.org:8000/stream.ogg', tags: ['bxl'], twitter: 'radiocampusbxl' }
 
