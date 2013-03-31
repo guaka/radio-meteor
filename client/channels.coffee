@@ -31,6 +31,8 @@ channels = {
     'radioairlibre': { url: 'http://streaming.domainepublic.net:8000/radioairlibre.ogg', tags: ['libre', 'bxl'] }
     'radiocampusbxl': { url: 'http://streamer.radiocampusbruxelles.org:8000/stream.ogg', tags: ['bxl'], twitter: 'radiocampusbxl' }
 
+    'klara': { url: 'http://mp3.streampower.be/klara-high.mp3', tags: ['be', 'classic'] }
+
     # todo: parse pls in client?
     # '106fmcoil': { url: 'http://212.29.254.129:7075/listen.pls' }
 }
