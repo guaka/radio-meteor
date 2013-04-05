@@ -1,5 +1,5 @@
 
-Twitter = new Meteor.Collection 'twitter'
+@Twitter = Twitter = new Meteor.Collection 'twitter'
 
 do ->
   fetchTweets = ->
