@@ -1,4 +1,4 @@
-channels = {
+@channels = {
     'cliqhop':  { tags: ['soma', 'idm'] }
     'secretagent': { tags: ['soma'] }
     'illstreet': 'soma'
@@ -27,7 +27,7 @@ channels = {
     'paradise': { url: 'http://scfire-m37.websys.aol.com:80/radio_paradise_mp3_128kbps' }
     'bbcworld': { url: 'http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk', tags: ['news'] }
     'fip': { url: 'http://mp3.live.tv-radio.com/fip/all/fiphautdebit.mp3' }
-    'tsfjazz': { url: 'http://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high', tags: ['jazz', 'ads'] }
+    # 'tsfjazz': { url: 'http://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high', tags: ['jazz', 'ads'] }
 
     'radiopanik': { url: 'http://streaming.domainepublic.net:8000/radiopanik.ogg', tags: ['libre', 'bx'] }
     'radioairlibre': { url: 'http://streaming.domainepublic.net:8000/radioairlibre.ogg', tags: ['libre', 'bxl'] }

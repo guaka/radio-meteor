@@ -4,7 +4,6 @@
   font-size: 85%;
 }
 
-
 #github-ribbon img {
   position: absolute; 
   top: 0; 
@@ -15,9 +14,8 @@
 
 
 html, body {
-  background: url(/radio-meteor-icon.png) no-repeat center center fixed;
-  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;
-  background-size: cover; 
+  background-color: #333;
+  color: #ccc;
 }
 
 .container {
