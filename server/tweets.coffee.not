@@ -1,5 +1,5 @@
 
-@Twitter = Twitter = new Meteor.Collection 'twitter'
+# @Twitter = Twitter = new Meteor.Collection 'twitter'
 
 do ->
   fetchTweets = ->
@@ -17,4 +17,4 @@ do ->
   Meteor.startup ->
     fetchTweets()
 
-  Meteor.setInterval fetchTweets, 20000
+  # Meteor.setInterval fetchTweets, 20000

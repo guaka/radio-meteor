@@ -1,5 +1,5 @@
 
-@Twitter = Twitter = new Meteor.Collection 'twitter'
+# @Twitter = Twitter = new Meteor.Collection 'twitter'
 
 tweets = null
 Template.tweets.feed = ->
