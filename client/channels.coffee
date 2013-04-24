@@ -35,6 +35,8 @@
 
     'klara': { url: 'http://mp3.streampower.be/klara-high.mp3', tags: ['be', 'classic'] }
 
+    'couleur3': { url: 'http://broadcast.infomaniak.ch/rsr-couleur3-high.mp3', tags: ['ch'] }
+
     # todo: parse pls in client?
     # '106fmcoil': { url: 'http://212.29.254.129:7075/listen.pls' }
 }
