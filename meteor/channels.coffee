@@ -21,6 +21,8 @@
     'sf1033': 'soma'
     'dubstep': 'soma'
 
+    'wassoulou': { url: 'http://listen.radionomy.com/radio-wassoulou-internationale', tags: ['mali', 'africa'] }
+
     'chillstep.info': { url: 'http://chillstep.info:1984/listen.ogg', tags: ['dubstep', 'chill'] }
 
     'concertzender': { url: 'http://streams.greenhost.nl:8080/live', tags: ['classical'] }  # pls: 'http://www.concertzender.nl/streams/live'
