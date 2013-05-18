@@ -24,24 +24,25 @@ Template.player.events
 
 
 playChannel = (channel) ->
-  Session.set 'channel', channel
+  Session.set 'channel', ''
+  Meteor.setTimeout (-> Session.set 'channel', channel), 200
   location.href = '#' + channel
   document.title = channel + ' | radio.meteor.com'
 
 
 currentChannel = ->
   name = Session.get 'channel'
-  channels[name]
+  channels[name] if name
+
+
 
 
 Template.player.srcUrl = ->
-  if currentChannel() is 'soma'
+  if currentChannel()?.tags?.indexOf('soma') > -1
     "http://ice.somafm.com/" + Session.get 'channel'
   else
-    if currentChannel()?.tags?.indexOf('soma') > -1
-      "http://ice.somafm.com/" + Session.get 'channel'
-    else
-      currentChannel()?.url
+    currentChannel()?.url
+
 
 Template.player.tags = ->
   channel = currentChannel()

@@ -1,25 +1,25 @@
 @channels = {
     'cliqhop':  { tags: ['soma', 'idm'] }
     'secretagent': { tags: ['soma'] }
-    'illstreet': 'soma'
-    'spacestation': 'soma'
-    'doomed': 'soma'
-    'missioncontrol': 'soma'
-    'beatblender': 'soma'
-    'bootliquor': 'soma'
+    'illstreet': { tags: ['soma'] }
+    'spacestation': { tags: ['soma'] }
+    'doomed': { tags: ['soma'] }
+    'missioncontrol': { tags: ['soma'] }
+    'beatblender': { tags: ['soma'] }
+    'bootliquor': { tags: ['soma'] }
     'brfm': { tags: ['soma', 'burningman'] }
-    'covers': 'soma'
+    'covers': { tags: ['soma'] }
     'digitalis': { tags: ['soma', 'indie'], twitter: '' }
-    'dronezone': 'soma'
+    'dronezone': { tags: ['soma'] }
     'groovesalad': { tags: ['soma', 'indie'], twitter: '' }
     'indiepop': { tags: ['soma', 'indie'], twitter: 'indiepoprocks' }
     'lush': { tags: ['soma', 'female'] }
-    'poptron': 'soma'
+    'poptron': { tags: ['soma'] }
     'suburbsofgoa': { tags: ['soma', 'world'] }
-    'u80s': 'soma'
-    'bagel': 'soma'
-    'sf1033': 'soma'
-    'dubstep': 'soma'
+    'u80s': { tags: ['soma'] }
+    'bagel': { tags: ['soma'] }
+    'sf1033': { tags: ['soma'] }
+    'dubstep': { tags: ['soma'] }
 
     'wassoulou': { url: 'http://listen.radionomy.com/radio-wassoulou-internationale', tags: ['mali', 'africa'] }
 

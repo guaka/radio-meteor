@@ -11,10 +11,11 @@
         PAUSE
       </button>
 
+      {{#if srcUrl}}
       <audio preload id="player">
         <source src="{{srcUrl}}" />
       </audio>
-      
+      {{/if}}
 
       <i class="icon-time"></i>
       <span id="currentTime"></span>
