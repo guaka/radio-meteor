@@ -31,7 +31,7 @@ readyStates =
     Meteor.setInterval ->
       if mtrPlayer.audioTag()
         mtrPlayer.checkStatus()
-    , 5000
+    , 7000
 
   play: =>
     console.log 'trying to .play()'
@@ -39,6 +39,7 @@ readyStates =
 
 
   setChannel: (channel) ->
+    @readyState = @networkState = null
     Session.set 'channel', ''
 
     # Attempt at making things more robust
@@ -54,10 +55,14 @@ readyStates =
 
     @audioTag().volume = 1
 
-    console.log 'checkStatus net', newNetworkState, @networkState, 'ready', newReadyState, @readyState
-    console.log 'duration', @audioTag().duration, 'currentTime', @audioTag().duration
+    console.log 'checkStatus net', newNetworkState, @networkState,
+          'ready', newReadyState, @readyState,
+          'currentTime', @audioTag().duration
 
-    if @readyState? and newReadyState is @readyState and [0, 1].indexOf(newReadyState) > -1 and newNetworkState isnt 2
+    if @readyState? and
+        newReadyState is @readyState and
+        [0, 1].indexOf(newReadyState) > -1 and
+        newNetworkState isnt 2
       console.log 'Restart channel'
       @readyState = @networkState = null
       @setChannel Session.get 'channel'
