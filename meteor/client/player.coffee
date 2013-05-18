@@ -11,36 +11,11 @@ Template.player.paused = ->
   not Session.get 'channel'
 
 
-
 Template.player.events
   'click button': (e) ->
     evt = e
     id = if e.srcElement? then e.srcElement.id else e.currentTarget.id
-    if id is 'stop'
-      channel = ''
-    else
-      channel = id.split('-')[1]
-    playChannel channel
-
-
-playChannel = (channel) ->
-  readyState = null
-  networkState = null
-
-  Session.set 'channel', ''
-  # Attempt at making things more robust
-  Meteor.setTimeout (-> Session.set 'channel', channel), 200
-
-  location.href = '#' + channel
-  document.title = channel + ' | radio.meteor.com'
-
-  # Good read: http://html5doctor.com/html5-audio-the-state-of-play/
-
-
-currentChannel = ->
-  name = Session.get 'channel'
-  channels[name] if name
-
+    mtrPlayer.setChannel (if id is 'stop' then '' else id.split('-')[1])
 
 
 Template.player.srcUrl = ->
@@ -48,6 +23,69 @@ Template.player.srcUrl = ->
     "http://ice.somafm.com/" + Session.get 'channel'
   else
     currentChannel()?.url
+
+
+@mtrPlayer = mtrPlayer = new class MeteorPlayer
+  readyState: null
+  networkState: null
+
+  getElement: ->
+    $('#player')[0]
+
+  constructor: ->
+    Meteor.startup ->
+      mtrPlayer.setChannel location.hash.slice(1)
+
+    Meteor.setInterval ->
+      if mtrPlayer.getElement()
+        mtrPlayer.checkStatus()
+    , 5000
+
+  play: =>
+    console.log 'trying to .play()'
+    @getElement()?.play()
+
+
+
+  setChannel: (channel) ->
+    Session.set 'channel', ''
+
+    # Attempt at making things more robust
+    Meteor.setTimeout (-> Session.set 'channel', channel), 200
+
+    location.href = '#' + channel
+    document.title = channel + ' | radio.meteor.com'
+
+    # Good read: http://html5doctor.com/html5-audio-the-state-of-play/
+
+  checkStatus: =>
+    newNetworkState = @getElement()?.networkState
+    newReadyState = @getElement()?.readyState
+
+    console.log 'checkStatus net', newNetworkState, @networkState, 'ready', newReadyState, @readyState
+
+    if @readyState? and newReadyState is @readyState and [0, 1].indexOf(newReadyState) > -1 and newNetworkState isnt 2
+      console.log 'Restart channel'
+      @readyState = @networkState = null
+      @setChannel Session.get 'channel'
+
+    else
+      if @getElement()?.currentTime
+        $('#currentTime')[0].innerHTML = moment().subtract('seconds', Math.round @getElement()?.currentTime).fromNow(true)
+
+      if newReadyState
+        $('#readyState')[0].innerHTML = readyStates[newReadyState]
+      if newNetworkState
+        $('#networkState')[0].innerHTML = networkStates[newNetworkState]
+
+      @readyState = newReadyState
+      @networkState = newNetworkState
+
+
+
+currentChannel = ->
+  name = Session.get 'channel'
+  channels[name] if name
 
 
 Template.player.tags = ->
@@ -59,14 +97,9 @@ Template.player.tags = ->
 
 
 
-Meteor.startup ->
-  playChannel location.hash.slice(1)
-
 
 Template.player.rendered = ->
-  console.log 'trying to .play()'
-  $('#player')[0]?.play()
-
+  mtrPlayer.play()
 
 networkStates =
   0: 'empty'
@@ -85,30 +118,3 @@ readyStates =
 
 
 
-readyState = networkState = null
-Meteor.setInterval ->
-  player = $('#player')[0]
-
-  if player?
-    newNetworkState = player.networkState
-    newReadyState = player.readyState
-
-    console.log 'net', newNetworkState, networkState, 'ready', newReadyState, readyState
-
-    if readyState? and newReadyState is readyState and [0, 1].indexOf(newReadyState) > -1 and newNetworkState isnt 2
-      console.log 'trying to restart channel'
-      readyState = networkState = null
-      playChannel Session.get 'channel'
-
-    if player.currentTime
-      $('#currentTime')[0].innerHTML = moment().subtract('seconds', Math.round player.currentTime).fromNow(true)
-
-    if newReadyState
-      $('#readyState')[0].innerHTML = readyStates[newReadyState]
-    if newNetworkState
-      $('#networkState')[0].innerHTML = networkStates[newNetworkState]
-
-    readyState = newReadyState
-    networkState = newNetworkState
-
-, 5000
