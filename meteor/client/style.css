@@ -1,13 +1,4 @@
 
-#github-ribbon img {
-  position: absolute; 
-  top: 0; 
-  right: 0; 
-  border: 0;
-  z-index: 999;
-}
-
-
 html, body {
   background-color: black;
   color: #ccc;
