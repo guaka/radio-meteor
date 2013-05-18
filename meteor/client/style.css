@@ -14,11 +14,13 @@
 
 
 html, body {
-  background-color: #333;
+  background-color: #1f0303;
   color: #ccc;
 }
 
 .container {
   background: black;
   opacity: 0.9;
+  width: 100%;
 }
+
