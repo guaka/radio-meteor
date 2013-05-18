@@ -24,16 +24,22 @@ Template.player.events
 
 
 playChannel = (channel) ->
+  readyState = null
+  networkState = null
+
   Session.set 'channel', ''
+  # Attempt at making things more robust
   Meteor.setTimeout (-> Session.set 'channel', channel), 200
+
   location.href = '#' + channel
   document.title = channel + ' | radio.meteor.com'
+
+  # Good read: http://html5doctor.com/html5-audio-the-state-of-play/
 
 
 currentChannel = ->
   name = Session.get 'channel'
   channels[name] if name
-
 
 
 
@@ -58,7 +64,8 @@ Meteor.startup ->
 
 
 Template.player.rendered = ->
-  $('#player')[0].play()
+  console.log 'trying to .play()'
+  $('#player')[0]?.play()
 
 
 networkStates =
@@ -77,15 +84,31 @@ readyStates =
 
 
 
+
+readyState = networkState = null
 Meteor.setInterval ->
   player = $('#player')[0]
 
   if player?
+    newNetworkState = player.networkState
+    newReadyState = player.readyState
+
+    console.log 'net', newNetworkState, networkState, 'ready', newReadyState, readyState
+
+    if readyState? and newReadyState is readyState and [0, 1].indexOf(newReadyState) > -1 and newNetworkState isnt 2
+      console.log 'trying to restart channel'
+      readyState = networkState = null
+      playChannel Session.get 'channel'
+
     if player.currentTime
       $('#currentTime')[0].innerHTML = moment().subtract('seconds', Math.round player.currentTime).fromNow(true)
-    if player.readyState
-      $('#readyState')[0].innerHTML = readyStates[player.readyState]
-    if player.networkState
-      $('#networkState')[0].innerHTML = networkStates[player.networkState]
+
+    if newReadyState
+      $('#readyState')[0].innerHTML = readyStates[newReadyState]
+    if newNetworkState
+      $('#networkState')[0].innerHTML = networkStates[newNetworkState]
+
+    readyState = newReadyState
+    networkState = newNetworkState
 
 , 5000
