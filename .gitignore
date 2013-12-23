@@ -1,3 +1,4 @@
 deploy.sh
 *.apk
 cordovaapp
+meteor/public/google*.html
