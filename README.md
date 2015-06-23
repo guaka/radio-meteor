@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/guaka/radio-meteor.png?label=ready&title=Ready)](https://waffle.io/guaka/radio-meteor)
 radio-meteor
 ============
 
