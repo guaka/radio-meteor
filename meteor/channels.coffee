@@ -26,7 +26,7 @@
     'chillstep.info': { url: 'http://chillstep.info:1984/listen.ogg', tags: ['dubstep', 'chill'] }
 
     'concertzender': { url: 'http://streams.greenhost.nl:8080/live', tags: ['classical'] }  # pls: 'http://www.concertzender.nl/streams/live'
-    'paradise': { url: 'http://scfire-m37.websys.aol.com:80/radio_paradise_mp3_128kbps' }
+    'paradise': { url: 'http://stream-uk1.radioparadise.com/mp3-128'}
     'bbcworld': { url: 'http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk', tags: ['news'] }
     'fip': { url: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3'}
     # 'tsfjazz': { url: 'http://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high', tags: ['jazz', 'ads'] }
