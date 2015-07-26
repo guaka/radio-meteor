@@ -44,10 +44,10 @@ myCL = (l) ->
 
   setChannel: (channel) ->
     @readyState = @networkState = null
-    Session.set 'channel', ''
+    Session.set 'channel', ''   
 
     # Attempt at making things more robust
-    Meteor.setTimeout (-> Session.set 'channel', channel), 200
+    Meteor.setTimeout (-> Session.set 'channel', channel), 20
 
     location.href = '#' + channel
     document.title = channel + ' | radio.meteor.com'

@@ -34,20 +34,13 @@ Template.player.events
     evt = e
     id = if e.srcElement? then e.srcElement.id else e.currentTarget.id
     mtrPlayer.setChannel (if id is 'stop' then '' else id.split('-')[1])
-  'keydown div': (e) ->
-    console.log e
-
-
-
 
 Template.player.rendered = ->
   mtrPlayer.play()
   $('body').on 'keydown', (e) ->
-    console.log 'key pressed', e
-    if e.keyCode == 39
-      nextChannel 1
-    if e.keyCode == 37
-      nextChannel -1
+    switch e.keyCode
+      when 39 then nextChannel 1
+      when 37 then nextChannel -1
 
 nextChannel = (n = 1) ->
   chnSorted = _.keys(channels).sort()
@@ -58,6 +51,5 @@ nextChannel = (n = 1) ->
     num = 0
   if num < 0
     num = chnSorted.length - 1
-  Session.set 'channel', chnSorted[num]
-
+  mtrPlayer.setChannel chnSorted[num]
 

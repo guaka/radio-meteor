@@ -1,10 +1,5 @@
 
 <template name="player">
-  {{#if srcUrl}}
-  <audio preload id="player">
-    <source src="{{srcUrl}}" />
-  </audio>
-  {{/if}}
   
   <div style="row">
     <div class="span4">
@@ -23,7 +18,7 @@
   
   <div id="channels" class="text-center" style="clear:both">
     <button class="btn {{#if paused}}btn-success{{else}}btn-danger{{/if}} btn-large" id="stop">
-      PAUSE{{#if paused}}D{{/if}}
+      PAUSE
     </button>
     
     {{#each channels}}
@@ -33,7 +28,12 @@
     {{/each}}
   </div>
 
-    
+  {{#if srcUrl}}
+  <audio preload id="player" controls>
+    <source src="{{srcUrl}}" />
+  </audio>
+  {{/if}}
+
   <div class="row" style="width:100%">
     <div class="span6">
       source: <input type="text" id="customUrl" value="{{srcUrl}}" />
