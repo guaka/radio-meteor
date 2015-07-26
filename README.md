@@ -2,9 +2,11 @@
 radio-meteor
 ============
 
-Radio Meteor is an Internet Radio player based on HTML5 and Meteorjs.
-There are only ad-free radio stations, such as SomaFM and Radio Paradise.
-There's also a somewhat buggy Android App.
+**Radio Meteor** is an Internet Radio player based on HTML5 and [Meteor](http://meteor.com).
+Currently there are only ad-free radio stations, such as SomaFM and Radio Paradise. There is a plan to allow anyone to add their favorite streams.
 
-It's playing at [radio.meteor.com](http://radio.meteor.com/)
-I'd be happy to work more on this but it's already working well for me.
+There was a somewhat buggy Android App for a while.
+
+It's playing at [radio.meteor.com](http://radio.meteor.com/).
+
+It's not great but it works well for [guaka](http://twitter.com/guaka).
