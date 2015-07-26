@@ -16,6 +16,11 @@ body {
   margin: 0;
 }
 
+footer,
+.docs {
+  font-family: Sans-Serif;
+}
+
 h1 {
   margin: 0;
 }
