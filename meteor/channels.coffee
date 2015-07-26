@@ -37,7 +37,7 @@
 
     'klara': { url: 'http://mp3.streampower.be/klara-high.mp3', tags: ['be', 'classic'] }
 
-    'couleur3': { url: 'http://broadcast.infomaniak.ch/rsr-couleur3-high.mp3', tags: ['ch'] }
+    'couleur3': { url: 'http://stream.srg-ssr.ch/m/couleur3/mp3_128', tags: ['ch'] }
 
     #'oldmen': { url: 'http://server-10.stream-server.nl:8140/', tags: ['60s', '70s'] }
 
