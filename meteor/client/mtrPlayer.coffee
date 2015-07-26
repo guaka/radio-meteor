@@ -44,10 +44,13 @@ myCL = (l) ->
 
   setChannel: (channel) ->
     @readyState = @networkState = null
-    Session.set 'channel', ''   
+    Session.set 'channel', channel
 
-    # Attempt at making things more robust
-    Meteor.setTimeout (-> Session.set 'channel', channel), 20
+    @audioTag()?.pause()
+    Meteor.setTimeout (=>
+      @audioTag().load()
+      @audioTag().play()
+    ), 10
 
     location.href = '#' + channel
     document.title = channel + ' | radio.meteor.com'
@@ -57,7 +60,7 @@ myCL = (l) ->
     newNetworkState = @audioTag().networkState
     newReadyState = @audioTag().readyState
 
-    @audioTag().volume = 1
+    # @audioTag().volume = 1
     @play()
 
     myCL ['checkStatus net', newNetworkState, @networkState,
