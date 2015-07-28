@@ -41,6 +41,14 @@ Template.player.rendered = ->
     switch e.keyCode
       when 39 then nextChannel 1
       when 37 then nextChannel -1
+      when 38 then volChange .1
+      when 40 then volChange -.1
+      
+volChange = (d) ->
+  vol = $('audio')[0].volume
+  vol += d
+  $('audio')[0].volume = Math.max(0, Math.min(vol, 1))
+
 
 nextChannel = (n = 1) ->
   chnSorted = _.keys(channels).sort()

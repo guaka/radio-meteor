@@ -1,11 +1,10 @@
 
 html, body {
   background-color: black;
-  color: #ccc;
+  color: white;
 }
 
 .container {
-  background: black;
   width: 100%;
 }
 
@@ -16,8 +15,10 @@ body {
   margin: 0;
 }
 
-footer,
-.docs {
+
+footer {
+  padding-top: 10px;
+  background-color: #333;
   font-family: Sans-Serif;
 }
 

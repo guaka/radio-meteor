@@ -2,11 +2,18 @@
 <template name="player">
   
   <div style="row">
-    <div class="span4">
-      <h1>radio meteor</h1>
+    <div class="span6">
+      <h1><img src="radio-meteor-wb.png" width="100" alt="Radio Meteor logo" /> radio meteor</h1>
     </div>
-    
-    <div class="span8 text-left">
+
+    <div class="span6 text-left">
+      {{#if srcUrl}}
+      <audio preload id="player" controls>
+	<source src="{{srcUrl}}" />
+      </audio>
+      <br />
+      {{/if}}
+
       <i class="icon-time"></i>
       <span id="currentTime"></span>
 
@@ -16,7 +23,7 @@
     </div>
   </div>
   
-  <div id="channels" class="text-center" style="clear:both">
+  <div id="channels" style="clear:both">
     <button class="btn {{#if paused}}btn-success{{else}}btn-danger{{/if}} btn-large" id="stop">
       PAUSE
     </button>
@@ -28,25 +35,5 @@
     {{/each}}
   </div>
 
-  {{#if srcUrl}}
-  <audio preload id="player" controls>
-    <source src="{{srcUrl}}" />
-  </audio>
-  {{/if}}
   
-  <div class="row" style="width:100%">
-    <div class="span6">
-      source: <input type="text" id="customUrl" value="{{srcUrl}}" />
-    </div>
-  </div>
-
-  <div class="docs">
-    <p>radio meteor is a quick way
-    for <a target="_blank" href="https://twitter.com/guaka">guaka</a> to listen to his
-    favorite internet radio stations. At some point it may also be a
-    more interactive experience where people can add their own
-    favorite stations.</p>
-
-    <p>You can change channels with the left and right keys.</p>
-  </div>
 </template>
