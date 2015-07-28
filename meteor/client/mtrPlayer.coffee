@@ -16,9 +16,6 @@ readyStates =
   4: 'enough'
 
 
-myCL = (l) ->
-  _.each l, (msg) ->
-    console.log msg
 
 
 @mtrPlayer = mtrPlayer = new class MeteorPlayer
@@ -62,10 +59,6 @@ myCL = (l) ->
     # @audioTag().volume = 1
     @play()
 
-    myCL ['checkStatus net', newNetworkState, @networkState,
-          'ready', newReadyState, @readyState,
-          'currentTime', @audioTag().duration]
-
     if @readyState? and
         newReadyState is @readyState and
         [0, 1].indexOf(newReadyState) > -1 and
@@ -75,9 +68,6 @@ myCL = (l) ->
       @setChannel Session.get 'channel'
 
     else
-      if @audioTag().currentTime
-        $('#currentTime')[0].innerHTML = moment().subtract('seconds', Math.round @audioTag().currentTime).fromNow true
-
       if newReadyState
         $('#readyState')[0].innerHTML = readyStates[newReadyState]
       if newNetworkState
