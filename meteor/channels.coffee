@@ -31,7 +31,7 @@
     'fip': { url: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3'}
     # 'tsfjazz': { url: 'http://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high', tags: ['jazz', 'ads'] }
     'ledjam' : { url: 'http://ledjamradio.ice.infomaniak.ch/ledjamradio.mp3', fb: 'https://www.facebook.com/ledjamradio' }
-
+    'meuh' : { url: 'http://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3' }
     'radiopanik': { url: 'http://streaming.domainepublic.net:8000/radiopanik.ogg', tags: ['libre', 'bx'] }
     'radioairlibre': { url: 'http://streaming.domainepublic.net:8000/radioairlibre.ogg', tags: ['libre', 'bxl'] }
     'radiocampusbxl': { url: 'http://streamer.radiocampusbruxelles.org:8000/stream.ogg', tags: ['bxl'], twitter: 'radiocampusbxl' }
