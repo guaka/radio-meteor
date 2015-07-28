@@ -38,7 +38,6 @@ myCL = (l) ->
     , 7000
 
   play: =>
-    console.log 'trying to .play()'
     @audioTag()?.play()
 
 
