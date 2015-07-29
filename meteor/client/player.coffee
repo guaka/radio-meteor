@@ -43,7 +43,16 @@ Template.player.rendered = ->
       when 37 then nextChannel -1
       when 38 then volChange .1
       when 40 then volChange -.1
-      
+      when 32 then mtrPlayer.setChannel ''
+      else
+        if e.keyCode >= 65 and e.keyCode <= 90
+          char = String.fromCharCode(e.keyCode + 32)
+          console.log char
+          for c in _.keys(channels).sort()
+            if char is c[0]
+              mtrPlayer.setChannel c
+              break
+        
 volChange = (d) ->
   vol = $('audio')[0].volume
   vol += d
