@@ -22,6 +22,10 @@ readyStates =
   readyState: null
   networkState: null
 
+  # Add methods:
+  # stop()
+  # play()
+
   audioTag: ->
     $('#player')[0]
 
@@ -44,8 +48,8 @@ readyStates =
 
     @audioTag()?.pause()
     Meteor.setTimeout (=>
-      @audioTag().load()
-      @audioTag().play()
+      @audioTag()?.load()
+      @audioTag()?.play()
     ), 10
 
     location.href = '#' + channel
