@@ -1,24 +1,19 @@
 
 <template name="player">
-  
-  <div style="row">
-    <div class="span6">
-      <h1><img src="radio-meteor-wb.png" width="100" alt="Radio Meteor logo" /> radio meteor</h1>
-    </div>
+  <h1 style="float:left"><img src="radio-meteor-wb.png" width="100" alt="Radio Meteor logo" /> radio meteor</h1>
 
-    <div class="span6 text-left">
-      {{#if srcUrl}}
-      <audio preload id="player" controls>
-	<source src="{{srcUrl}}" />
-      </audio>
-      {{/if}}
+  {{#if srcUrl}}
+  <audio preload id="player" controls>
+    <source src="{{srcUrl}}" />
+  </audio>
 
-      <i class="icon-signal"></i>
-      <span id="networkState"></span>
-      <i class="icon-time"></i>
-      <span id="readyState"></span>
-    </div>
+  <div>
+    <i style="margin-left:15px" class="icon-signal"></i>
+    <span id="networkState"></span>
+    <i class="icon-time"></i>
+    <span id="readyState"></span>
   </div>
+  {{/if}}
   
   <div id="channels" style="clear:both">
     <button class="btn {{#if paused}}btn-success{{else}}btn-danger{{/if}} btn-large" id="stop">
@@ -31,6 +26,4 @@
     </button>
     {{/each}}
   </div>
-
-  
 </template>
