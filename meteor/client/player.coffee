@@ -45,7 +45,7 @@ Template.player.rendered = ->
       when 40 then volChange -.1
       when 32 then mtrPlayer.setChannel ''
       else
-        if e.keyCode >= 65 and e.keyCode <= 90
+        if e.keyCode >= 65 and e.keyCode <= 90 and e.altKey
           char = String.fromCharCode(e.keyCode + 32)
           console.log char
           for c in _.keys(channels).sort()
