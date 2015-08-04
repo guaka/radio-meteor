@@ -26,7 +26,7 @@
 <div class="container">
   <div id="channels" style="clear:both">
     <a href="/" class="btn {{#if paused}}btn-success{{else}}btn-danger{{/if}} btn-large" id="stop">
-      STOP
+      <i class="fa fa-stop"></i>
     </a>
     
     {{#each channels}}
@@ -37,11 +37,11 @@
 
   </div>
 
-  <h1>{{channel.name}}</h1>
+  <h1><i class="fa fa-play"></i> {{channel.name}}</h1>
   <div id="metadata">
     {{#if channel.site}}<a target="_blank" href="{{channel.site}}">{{channel.site}}</a>{{/if}}
-    {{#if channel.facebook}}<a target="_blank" href="{{channel.facebook}}">facebook</a>{{/if}}
-    {{#if channel.twitter}}<a target="_blank" href="{{channel.twitter}}">twitter</a>{{/if}}
+    {{#if channel.facebook}}<a target="_blank" href="{{channel.facebook}}"><i class="fa fa-facebook-square"></i></a>{{/if}}
+    {{#if channel.twitter}}<a target="_blank" href="{{channel.twitter}}"><i class="fa fa-twitter-square"></i></a>{{/if}}
   </div>
 </div>
 </article>
