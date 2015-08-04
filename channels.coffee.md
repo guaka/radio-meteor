@@ -36,6 +36,7 @@ The soma tag is used to build the stream URL.
 		'wassoulou':
                     url: 'http://listen.radionomy.com/radio-wassoulou-internationale'
                     tags: ['mali', 'africa']
+                    facebook: 'https://www.facebook.com/pages/Radio-Wassoulou-Internationale/391516484262861'
 
 
 ## More electronic
@@ -72,14 +73,14 @@ The soma tag is used to build the stream URL.
                     url: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3'
                     tags: ['fr', 'paris', 'jazz', 'eclectic']
                     site: 'http://www.fipradio.fr/'
-                    fb: 'https://www.facebook.com/fipradio'
+                    facebook: 'https://www.facebook.com/fipradio'
                     twitter: 'https://twitter.com/fipradio'
             
 		'ledjam':
                     url: 'http://ledjamradio.ice.infomaniak.ch/ledjamradio.mp3'
                     tags: ['fr']
                     site: 'http://www.ledjamradio.com/'
-                    fb: 'https://www.facebook.com/ledjamradio'
+                    facebook: 'https://www.facebook.com/ledjamradio'
                     twitter: 'https://twitter.com/Ledjam_Radio'
             
 		'meuh':

@@ -21,7 +21,7 @@ Template.player.helpers
     if currentChannel()?.tags?.indexOf('soma') > -1
       currentChannel().site = 'http://somafm.com/'
       currentChannel().twitter = 'https://twitter.com/somafm'
-      currentChannel().fb = 'https://facebook.com/somafm'
+      currentChannel().facebook = 'https://facebook.com/somafm'
       "http://ice.somafm.com/" + Session.get 'channel'
     else
       currentChannel()?.url
