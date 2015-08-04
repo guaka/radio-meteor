@@ -8,3 +8,4 @@ http
 bootstrap
 spiderable
 standard-app-packages
+iron:router

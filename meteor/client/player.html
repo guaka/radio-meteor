@@ -1,6 +1,9 @@
 
 <template name="player">
-  <h1 style="float:left"><img src="radio-meteor-wb.png" width="100" alt="Radio Meteor logo" /> radio meteor</h1>
+  <h1 style="float:left">
+    <img src="/radio-meteor-wb.png" width="100" alt="Radio Meteor logo" /> 
+    radio meteor
+  </h1>
 
   {{#if srcUrl}}
   <audio preload id="player" controls>
@@ -16,14 +19,15 @@
   {{/if}}
   
   <div id="channels" style="clear:both">
-    <button class="btn {{#if paused}}btn-success{{else}}btn-danger{{/if}} btn-large" id="stop">
+    <a class="btn {{#if paused}}btn-success{{else}}btn-danger{{/if}} btn-large" id="stop">
       STOP
-    </button>
+    </a>
     
     {{#each channels}}
-    <button class="btn btn-large {{#if playing}}btn-success{{else}}btn-primary{{/if}}" id="channel-{{name}}">
+    <a href="/{{name}}" class="channel btn btn-large {{#if playing}}btn-success{{else}}btn-primary{{/if}}">
       {{name}}
-    </button>
+    </a>
     {{/each}}
+
   </div>
 </template>

@@ -4,11 +4,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<template name="AppLayout">
   <div class="container">
     {{> player}}
+
+    {{> yield}}
     
     {{> footer}}
   </div>
-</body>
+</template>
 
+
+
+<template name="home">
+  <div class="container">
+    Welcome to radio meteor.  Click on a channel to listen, use left
+    and right keys, or use Alt+letter to change channels
+  </div>
+</template>
+
+
+<template name="channel">
+
+</template>

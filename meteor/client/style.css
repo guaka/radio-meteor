@@ -10,7 +10,6 @@ html, body {
 
 
 body {
-  font-family: "Monaco", "Lucida Console", "Monotype.com", "Andale Mono", "Courier", "Trebuchet MS", "Sans-Serif";
   font-size: 90%;
   margin: 0;
 }
@@ -35,10 +34,10 @@ p a {
   margin-bottom: 20px;
 }
 
-button {
+
+#channels a {
   margin-top: 8px;
 }
-
 
 #customUrl {
   width: 90%;

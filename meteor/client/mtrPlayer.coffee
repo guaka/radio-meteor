@@ -30,8 +30,8 @@ readyStates =
     $('#player')[0]
 
   constructor: ->
-    Meteor.startup ->
-      mtrPlayer.setChannel location.hash.slice(1)
+    #Meteor.startup ->
+    #  mtrPlayer.setChannel location.hash.slice(1)
 
     Meteor.setInterval ->
       if mtrPlayer.audioTag()
@@ -49,10 +49,9 @@ readyStates =
     @audioTag()?.pause()
     Meteor.setTimeout (=>
       @audioTag()?.load()
-      @audioTag()?.play()
+      @play()
     ), 10
 
-    location.href = '#' + channel
     document.title = channel + ' | radio.meteor.com'
 
 
