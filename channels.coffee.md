@@ -11,9 +11,9 @@ Here you can define the channels of your stream.
 		'bootliquor': { tags: ['soma'] }
 		'brfm': { tags: ['soma', 'burningman'] }
 		'covers': { tags: ['soma'] }
-		'digitalis': { tags: ['soma', 'indie'], twitter: '' }
+		'digitalis': { tags: ['soma', 'indie'] }
 		'dronezone': { tags: ['soma'] }
-		'groovesalad': { tags: ['soma', 'indie'], twitter: '' }
+		'groovesalad': { tags: ['soma', 'indie'] }
 		'indiepop': { tags: ['soma', 'indie'], twitter: 'indiepoprocks' }
 		'lush': { tags: ['soma', 'female'] }
 		'poptron': { tags: ['soma'] }
