@@ -19,13 +19,10 @@ You're welcome to add channels and metadata by editting (i.e. fork and send pull
 
 ## Background
 
-It's not great but it works well for [guaka](http://twitter.com/guaka).
+Radio Meteor was inspired by [somafm-popup](https://github.com/joe-roth/somafm-popup) and the need for
+a nice way to play Soma.fm streams, [Radio Paradise](http://www.radioparadise.com/), [Radio Fip](http://www.fipradio.fr/) and more.
 
-Inspired by https://github.com/joe-roth/somafm-popup and the need for
-a nice way to play Soma.fm streams, [Radio
-Paradise](http://www.radioparadise.com/), [Radio
-Fip](http://www.fipradio.fr/) and more.
-
+It's not really excellent but it does the job. [guaka](http://twitter.com/guaka) is quite happy with it.
 
 
 
