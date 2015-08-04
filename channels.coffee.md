@@ -85,6 +85,8 @@ The soma tag is used to build the stream URL.
 		'meuh':
                     url: 'http://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3'
                     tags: ['fr', 'eclectic', 'paris']
+                    site: 'http://www.radiomeuh.com/'
+                    facebook: 'https://www.facebook.com/radiomeuh'
                     twitter: 'https://twitter.com/radiomeuh'
 
 ## Alternative from Brussels
