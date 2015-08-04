@@ -52,7 +52,6 @@ readyStates =
       @play()
     ), 10
 
-    document.title = channel + ' | radio.meteor.com'
 
 
   checkStatus: =>

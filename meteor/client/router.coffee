@@ -5,8 +5,10 @@ Router.route '/', ->
   @render 'home'
   mtrPlayer.setChannel ''
 
-Router.route '/:_id', ->
-  mtrPlayer.setChannel @params._id
+Router.route '/:channel', ->
+  channel = @params.channel
+  mtrPlayer.setChannel channel
+  document.title = channel + ' | radio.meteor.com'
   @render 'channel'
 
 Router.configure 
