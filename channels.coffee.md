@@ -1,6 +1,12 @@
 Here you can define the channels of your stream.
 
 	@channels = {
+	
+## SomaFM streams
+
+The soma tag is used to know how to build the stream URL.
+
+
 		'cliqhop':  { tags: ['soma', 'idm'] }
 		'secretagent': { tags: ['soma'] }
 		'illstreet': { tags: ['soma'] }
@@ -23,21 +29,43 @@ Here you can define the channels of your stream.
 		'sf1033': { tags: ['soma'] }
 		'dubstep': { tags: ['soma'] }
 
+
+## Malian music rocks
+
 		'wassoulou': { url: 'http://listen.radionomy.com/radio-wassoulou-internationale', tags: ['mali', 'africa'] }
+
+
+## More electronic
 
 		'chillstep.info': { url: 'http://chillstep.info:1984/listen.ogg', tags: ['dubstep', 'chill'] }
 
+## Classical
+
 		'concertzender': { url: 'http://streams.greenhost.nl:8080/live', tags: ['classical'] }
+		'klara': { url: 'http://mp3.streampower.be/klara-high.mp3', tags: ['be', 'classic'] }
+
+## Paradise
+
 		'paradise': { url: 'http://stream-uk1.radioparadise.com/mp3-128'}
+
+## News
+
 		'bbcworld': { url: 'http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk', tags: ['news'] }
+		
+## French excellence
+
 		'fip': { url: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3'}
 		'ledjam' : { url: 'http://ledjamradio.ice.infomaniak.ch/ledjamradio.mp3', fb: 'https://www.facebook.com/ledjamradio' }
 		'meuh' : { url: 'http://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3' }
+
+## Alternative from Brussels
+
 		'radiopanik': { url: 'http://streaming.domainepublic.net:8000/radiopanik.ogg', tags: ['libre', 'bx'] }
 		'radioairlibre': { url: 'http://streaming.domainepublic.net:8000/radioairlibre.ogg', tags: ['libre', 'bxl'] }
 		'radiocampusbxl': { url: 'http://streamer.radiocampusbruxelles.org:8000/stream.ogg', tags: ['bxl'], twitter: 'radiocampusbxl' }
 
-		'klara': { url: 'http://mp3.streampower.be/klara-high.mp3', tags: ['be', 'classic'] }
+
+## Swiss-French 
 
 		'couleur3': { url: 'http://stream.srg-ssr.ch/m/couleur3/mp3_128', tags: ['ch'] }
 
