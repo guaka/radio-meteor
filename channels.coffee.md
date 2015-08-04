@@ -1,4 +1,6 @@
 Here you can define the channels of your stream.
+Pull requests for ad free radio stations welcome.
+Discussion about improvments at [#47](https://github.com/guaka/radio-meteor/issues/47)
 
 	@channels = 
 	
