@@ -6,7 +6,6 @@ Here you can define the channels of your stream.
 
 The soma tag is used to know how to build the stream URL.
 
-
 		'cliqhop':  { tags: ['soma', 'idm'] }
 		'secretagent': { tags: ['soma'] }
 		'illstreet': { tags: ['soma'] }
@@ -69,7 +68,15 @@ The soma tag is used to know how to build the stream URL.
 
 		'couleur3': { url: 'http://stream.srg-ssr.ch/m/couleur3/mp3_128', tags: ['ch'] }
 
+## Streams with ads
+
+These should be turned off by default, but can be enabled by clicking on the tags (to implement).
+
+
 		#'oldmen': { url: 'http://server-10.stream-server.nl:8140/', tags: ['60s', '70s'] }
 		# todo: parse pls in client?
 		# '106fmcoil': { url: 'http://212.29.254.129:7075/listen.pls' }
+		
+Don't forget to close
+
 	}
