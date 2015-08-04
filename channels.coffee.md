@@ -78,6 +78,7 @@ The soma tag is used to build the stream URL.
 		'ledjam':
                     url: 'http://ledjamradio.ice.infomaniak.ch/ledjamradio.mp3'
                     tags: ['fr']
+                    site: 'http://www.ledjamradio.com/'
                     fb: 'https://www.facebook.com/ledjamradio'
                     twitter: 'https://twitter.com/Ledjam_Radio'
             
