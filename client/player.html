@@ -1,9 +1,9 @@
 
 <template name="player">
-  <h1 style="float:left">
+  <h2 style="float:left">
     <img src="/radio-meteor-wb.png" width="100" alt="Radio Meteor logo" /> 
     radio meteor
-  </h1>
+  </h2>
 
   {{#if srcUrl}}
   <audio preload id="player" controls>
@@ -30,4 +30,14 @@
     {{/each}}
 
   </div>
+
+  <h1>{{channel.name}}</h1>
+  <div id="metadata">
+    {{#if channel.site}}<a target="_blank" href="{{channel.site}}">website</a>{{/if}}
+    {{#if channel.fb}}<a target="_blank" href="{{channel.fb}}">facebook</a>{{/if}}
+    {{#if channel.twitter}}<a target="_blank" href="{{channel.twitter}}">twitter</a>{{/if}}
+  </div>
+
+
+
 </template>

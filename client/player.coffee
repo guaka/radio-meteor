@@ -2,12 +2,14 @@
 
 currentChannel = ->
   name = Session.get 'channel'
-  channels[name] if name
+  if name
+    channels[name].name = name
+    channels[name]
 
 
 Template.player.helpers
   channels: ->
-    ({ name: c, playing: c is Session.get('channel')} for c in _.keys(channels).sort())
+    { name: c, playing: c is Session.get('channel') } for c in _.keys(channels).sort()
 
   playing: ->
     this.name is Session.get 'channel'
@@ -21,11 +23,9 @@ Template.player.helpers
     else
       currentChannel()?.url
 
-  tags: -> 
-    if (channel = currentChannel()) is 'soma'
-      'soma'
-    else
-      channel?.tags
+  channel: ->
+    currentChannel()
+
 
 
 

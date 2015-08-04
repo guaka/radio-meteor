@@ -50,7 +50,7 @@ The soma tag is used to build the stream URL.
                     url: 'http://streams.greenhost.nl:8080/live'
                     tags: ['nl', 'classical']
 
-                'klara':
+        'klara':
                     url: 'http://mp3.streampower.be/klara-high.mp3'
                     tags: ['be', 'classical']
 
@@ -71,13 +71,20 @@ The soma tag is used to build the stream URL.
 		'fip':
                     url: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3'
                     tags: ['fr', 'paris', 'jazz', 'eclectic']
+                    site: 'http://www.fipradio.fr/'
+                    fb: 'https://www.facebook.com/fipradio'
+                    twitter: 'https://twitter.com/fipradio'
             
 		'ledjam':
                     url: 'http://ledjamradio.ice.infomaniak.ch/ledjamradio.mp3'
+                    tags: ['fr']
                     fb: 'https://www.facebook.com/ledjamradio'
+                    twitter: 'https://twitter.com/Ledjam_Radio'
             
 		'meuh':
                     url: 'http://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3'
+                    tags: ['fr', 'eclectic', 'paris']
+                    twitter: 'https://twitter.com/radiomeuh'
 
 ## Alternative from Brussels
 
