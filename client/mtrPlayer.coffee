@@ -57,8 +57,6 @@ readyStates =
   checkStatus: =>
     newNetworkState = @audioTag().networkState
     newReadyState = @audioTag().readyState
-
-    # @audioTag().volume = 1
     @play()
 
     if @readyState? and
@@ -68,6 +66,8 @@ readyStates =
       console.log 'Restart channel'
       @readyState = @networkState = null
       @setChannel Session.get 'channel'
+      @audioTag()?.load()
+      @play()
 
     else
       if newReadyState
