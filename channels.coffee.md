@@ -59,7 +59,10 @@ The soma tag is used to build the stream URL.
 
 		'paradise':
                     url: 'http://stream-uk1.radioparadise.com/mp3-128'
-                    tags: ['rock']
+                    tags: ['US', 'rock', 'eclectic']
+                    site: 'http://www.radioparadise.com/'
+                    facebook: 'https://www.facebook.com/RadioParadise'
+                    twitter: 'https://twitter.com/RadioParadise'
 
 ## Neringa
 
