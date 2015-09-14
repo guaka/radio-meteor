@@ -61,6 +61,13 @@ The soma tag is used to build the stream URL.
                     url: 'http://stream-uk1.radioparadise.com/mp3-128'
                     tags: ['rock']
 
+## Neringa
+		'neringa':
+                    url: 'http://streamer.midiaudio.com:80/ner'
+                    tags: ['lt', 'eclectic', 'chill']
+                    site: 'http://www.neringafm.lt/'
+                    facebook: 'https://www.facebook.com/NeringaFM'
+
 ## News
 
 		'bbcworld':
