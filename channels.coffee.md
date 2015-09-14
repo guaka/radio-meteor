@@ -62,6 +62,7 @@ The soma tag is used to build the stream URL.
                     tags: ['rock']
 
 ## Neringa
+
 		'neringa':
                     url: 'http://streamer.midiaudio.com:80/ner'
                     tags: ['lt', 'eclectic', 'chill']
