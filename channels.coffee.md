@@ -123,6 +123,14 @@ The soma tag is used to build the stream URL.
                     url: 'http://stream.srg-ssr.ch/m/couleur3/mp3_128'
                     tags: ['ch']
 
+## UK Indie
+                'amazing':
+                    url: 'http://109.74.195.10:8000'
+                    # @todo add support for .pls
+                    pls: 'http://stream.amazingradio.com:8000/listen.pls'
+		    site: 'http://amazingradio.com/'
+		    
+
 ## Streams with ads
 
 These should be turned off by default, but can be enabled by clicking on the tags (to implement).
