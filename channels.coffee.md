@@ -64,7 +64,13 @@ The soma tag is used to build the stream URL.
                     facebook: 'https://www.facebook.com/RadioParadise'
                     twitter: 'https://twitter.com/RadioParadise'
 
-## Neringa
+## Lithuanian excellence
+
+        'pmr':
+                    url: 'http://pmr.lt/streams/pmr-2'
+                    tags: ['lt', 'eclectic', 'chill', 'world']
+                    site: 'http://pmr.lt/en'
+                    facebook: 'https://www.facebook.com/PMR.LT'
 
         'neringa':
                     url: 'http://streamer.midiaudio.com:80/ner'
