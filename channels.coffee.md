@@ -130,6 +130,8 @@ The soma tag is used to build the stream URL.
                     # @todo add support for .pls
                     pls: 'http://stream.amazingradio.com:8000/listen.pls'
                     site: 'http://amazingradio.com/'
+                    twitter: 'https://twitter.com/amazingradio'
+                    facebook: 'https://www.facebook.com/amazingradio'
             
 
 ## Streams with ads
