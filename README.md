@@ -10,7 +10,7 @@ anyone to add their favorite streams.
 
 There was a buggy Android app. There may be a working one again in the future.
 
-It's playing at [radio.meteor.com](http://radio.meteor.com/).
+It's playing at [radio.guaka.org](http://radio.guaka.org/).
 
 ## Channels
 
