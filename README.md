@@ -12,14 +12,14 @@ I'll probably turn it into a static page, since anyway there's nothing happening
 radio-meteor
 ============
 
-**Radio Meteor** is an Internet Radio player based on HTML5 and
+**Radio Guaka** is an Internet Radio player based on HTML5 and
 [Meteor](http://meteor.com).  Currently there are only  [ad-free](http://moneyless.org/tags/advertising)  radio
 stations, such as SomaFM and Radio Paradise. There is a plan to allow
 anyone to add their favorite streams.
 
 There was a buggy Android app. There may be a working one again in the future.
 
-It's playing at [radio.meteor.com](http://radio.meteor.com/).
+It's playing at [radio.guaka.org](http://radio.guaka.org/).
 
 ## Channels
 
@@ -38,5 +38,5 @@ It's not really excellent but it does the job. [guaka](http://twitter.com/guaka)
 Links
 -----
 
-* [radio.meteor.com](http://radio.meteor.com/)
+* [radio.guaka.org](http://radio.guaka.org/)
 * [Mozilla Dev resources](https://developer.mozilla.org/en-US/docs/DOM/HTMLMediaElement)
