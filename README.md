@@ -1,5 +1,14 @@
 [![Stories in Ready](https://badge.waffle.io/guaka/radio-meteor.png?label=ready&title=Ready)](https://waffle.io/guaka/radio-meteor)
 
+
+Pfffff
+======
+
+Meteor.com fucked up with their hosting. And now it's on Heroku which is quite flaky.
+I'll probably turn it into a static page, since anyway there's nothing happening on the server side.
+
+
+
 radio-meteor
 ============
 
