@@ -140,6 +140,15 @@ The soma tag is used to build the stream URL.
                     facebook: 'https://www.facebook.com/amazingradio'
             
 
+## Ukrainian music
+
+        'urbanspaceradio':
+                    url: 'http://stream.mjoy.ua:8000/urban-space-radio'
+                    site: 'http://urbanspaceradio.com/'
+                    twitter: 'https://twitter.com/UrbanSpaceRadio'
+                    facebook: 'https://www.facebook.com/urbanspaceradio'
+                    tags: ['ua', 'eclectic', 'chill']
+
 ## Streams with ads
 
 These should be turned off by default, but can be enabled by clicking on the tags (to implement).
